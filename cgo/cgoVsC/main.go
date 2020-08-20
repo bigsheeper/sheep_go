@@ -4,7 +4,7 @@ package main
 
 #cgo CFLAGS: -I./
 
-#cgo LDFLAGS: -L/home/sheep/go/src/c2go/build -ltest -Wl,-rpath=./build
+#cgo LDFLAGS: -L./build -ltest -Wl,-rpath=./build
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -57,8 +57,12 @@ func test_c_ptr() {
 }
 
 func main() {
-	//test_print()
-	//test_sum()
-	//test_go_ptr()
+	fmt.Println("Test print:")
+	test_print()
+	fmt.Println("\n\n\nTest sum:")
+	test_sum()
+	fmt.Println("\n\n\nTest go ptr:")
+	test_go_ptr()
+	fmt.Println("\n\n\nTest c ptr:")
 	test_c_ptr()
 }
