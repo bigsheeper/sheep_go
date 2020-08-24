@@ -13,7 +13,7 @@ import "C"
 import "fmt"
 
 func test_person() {
-	var person = C.PersonInit(5);
+	var person = C.PersonInit(5)
 	var age = C.age(person)
 	fmt.Println(age)
 }
