@@ -5,6 +5,7 @@ package main
 #cgo CFLAGS: -I./
 
 #cgo LDFLAGS: -L./build -lcwrap -Wl,-rpath=./build
+//#cgo LDFLAGS: -L./build -lcwrap
 
 #include "cwrap.h"
 
